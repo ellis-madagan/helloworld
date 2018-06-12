@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Build Project') {
       steps {
-        powershell(script: 'build.ps1', returnStdout: true)
+        powershell(script: '.\\build.ps1', returnStdout: true)
       }
     }
   }
