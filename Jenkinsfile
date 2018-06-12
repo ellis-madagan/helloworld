@@ -8,5 +8,10 @@ pipeline {
         fileExists 'build.ps1'
       }
     }
+    stage('Build Project') {
+      steps {
+        powershell(script: 'build.ps1', returnStdout: true)
+      }
+    }
   }
 }
