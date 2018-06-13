@@ -13,5 +13,10 @@ pipeline {
         powershell(script: '.\\build.ps1', returnStdout: true)
       }
     }
+    stage('Verify Build Success') {
+      steps {
+        fileExists 'helloworld.dll'
+      }
+    }
   }
 }
