@@ -18,5 +18,10 @@ pipeline {
         fileExists 'helloworld.dll'
       }
     }
+    stage('Run Build') {
+      steps {
+        powershell(script: 'scripts/run.ps1', returnStatus: true, returnStdout: true)
+      }
+    }
   }
 }
