@@ -23,7 +23,5 @@ pipeline {
         powershell(script: 'scripts/run.ps1', returnStatus: true, returnStdout: true)
       }
     }
-    stage('Hello World') {
-    }
   }
 }
